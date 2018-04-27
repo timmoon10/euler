@@ -107,7 +107,7 @@ binToInt (Negative x) = case binToInt (Negative (tail x)) of
                                             then Just (2 * prev - 1)
                                             else Just (2 * prev)
                                        else Nothing
-  where bound = ((minBound :: Int) - 1) `quot` 2
+  where bound = ((minBound :: Int) + 1) `quot` 2
 
 -- Exclusive-or
 xor :: Bool -> Bool -> Bool
